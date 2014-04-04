@@ -772,14 +772,3 @@ hr {
         .btc-donate .address:after {
           left: 50%;
           bottom: 2px; } }
-          
-   img{
-      max-width: 128px;
-      max-height: 128px;
-      height:auto;
-      zoom:expression( function(e) {
-      if(e.width>e.height) {if (e.width>128) { e.height = e.height*(128 /e.width); e.width=128; }}
-      else {if (e.height>128) { e.width = e.width*(128 /e.height); e.height=128; }}
-      e.style.zoom = '1';}(this));
-      overflow:hidden; 
-    }
