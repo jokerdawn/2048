@@ -55,22 +55,16 @@ HTMLActuator.prototype.addTile = function (tile) {
   var text=new Array(18);
   text[0] = " ";
   text[1] = "<img src=images/1.jpg />";
-  text[2] = "2";
-  text[3] = "3";
-  text[4] = "4";
-  text[5] = "5";
-  text[6] = "6";
-  text[7] = "7";
-  text[8] = "8";
-  text[9] = "9";
-  text[10] = "10";
-  text[11] = "11";
-  text[12] = "12";
-  text[13] = "13";
-  text[14] = "14";
-  text[15] = "15";
-  text[16] = " ";
-  text[17] = " ";
+  text[2] = "<img src=images/2.jpg />";
+  text[3] = "<img src=images/3.jpg />";
+  text[4] = "<img src=images/4.jpg />";
+  text[5] = "<img src=images/5.jpg />";
+  text[6] = "<img src=images/6.jpg />";
+  text[7] = "<img src=images/7.jpg />";
+  text[8] = "<img src=images/8.jpg />";
+  text[9] = "<img src=images/9.jpg />";
+  text[10] = "<img src=images/10.jpg />";
+  text[11] = "<img src=images/11.jpg />";
   var self = this;
   var text2 = function (n) { var r = 0; while (n > 1) r++, n >>= 1; return r; }
 
@@ -82,7 +76,7 @@ HTMLActuator.prototype.addTile = function (tile) {
   // We can't use classlist because it somehow glitches when replacing classes
   var classes = ["tile", "tile-" + tile.value, positionClass];
 
-  if (tile.value > 131072) classes.push("tile-super");
+  if (tile.value > 2048) classes.push("tile-super");
 
   this.applyClasses(wrapper, classes);
 
@@ -152,24 +146,10 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 HTMLActuator.prototype.message = function (won) {
   var mytxt=new Array(14);
   mytxt[0]="连秦始皇都见不到了T.T";
-  mytxt[1]="曹贼你还我大汉江山！";
-  mytxt[2]="都是赵高害得我！";
-  mytxt[3]="司马老儿果然奸诈！";
-  mytxt[4]="江山难坐啊！";
-  mytxt[5]="明朝天下一统，可惜看不到了！";
-  mytxt[6]="毁在杨广手里了……";
-  mytxt[7]="安史之乱亡我大唐……";
-  mytxt[8]="赵匡胤黄袍加身，兵不血刃啊！";
-  mytxt[9]="元人铁蹄果然厉害！";
-  mytxt[10]="还是朱元璋厉害……";
-  mytxt[11]="天地会的弟兄们，反清复明啊！";
-  mytxt[12]="连辛亥革命的黎明都没等到……";
-  mytxt[13]="看不到天朝的太阳了 = =";
-
-
+ 
   var text3 = function (m) { var r = 0; while (m > 1) r++, m >>= 1; return r; }
   var type    = won ? "game-won" : "game-over";
-  var message = won ? "中华人民共和国万岁！" : mytxt[text3(maxscore)-3];
+  var message = won ? "中华人民共和国万岁！" : mytxt[0];
 
   if (typeof ga !== "undefined") {
     ga("send", "event", "game", "end", type, this.score);
