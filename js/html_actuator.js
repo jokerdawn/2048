@@ -132,21 +132,12 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 };
 
 HTMLActuator.prototype.message = function (won) {
-  var mytxt=new Array(9);
-  mytxt[0]="连秦始皇都见不到了T.T";
-  mytxt[1]="都是赵高害得我！";
-  mytxt[2]="曹贼你还我大汉江山！";
-  mytxt[3]="安史之乱亡我大唐……";
-  mytxt[4]="元人铁蹄果然厉害！";
-  mytxt[5]="还是朱元璋厉害……";
-  mytxt[6]="天地会的弟兄们，反清复明啊！";
-  mytxt[7]="连辛亥革命的黎明都没等到……";
-  mytxt[8]="看不到天朝的太阳了 = =";
-
+  var mytxt=new Array(1);
+  mytxt[0]="HAHAHAHAHHAH";
 
   var text3 = function (m) { var r = 0; while (m > 1) r++, m >>= 1; return r; }
   var type    = won ? "game-won" : "game-over";
-  var message = won ? "中华人民共和国万岁！" : mytxt[text3(maxscore)-2];
+  var message = won ? "nihao" : mytxt[0];
 
   if (typeof ga !== "undefined") {
     ga("send", "event", "game", "end", type, this.score);
@@ -166,7 +157,7 @@ HTMLActuator.prototype.clearMessage = function () {
   this.messageContainer.classList.remove("game-over");
 };
 
-HTMLActuator.prototype.scoreTweetButton = function () {
+/*HTMLActuator.prototype.scoreTweetButton = function () {
   var tweet = document.createElement("a");
   tweet.classList.add("twitter-share-button");
   tweet.setAttribute("href", "https://twitter.com/share");
