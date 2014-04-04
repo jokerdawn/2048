@@ -773,4 +773,4 @@ hr {
           left: 50%;
           bottom: 2px; } }
 
-  img { (max-width: 100%)!important;}
+  img { max-width: 100% !important;}
