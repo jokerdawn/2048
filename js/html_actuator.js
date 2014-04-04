@@ -54,7 +54,7 @@ HTMLActuator.prototype.clearContainer = function (container) {
 HTMLActuator.prototype.addTile = function (tile) {
   var text=new Array(18);
   text[0] = " ";
-  text[1] = "<img src='images/1.jpg' />";
+  text[1] = "<img src= images/1.jpg />";
   text[2] = "2";
   text[3] = "3";
   text[4] = "4";
