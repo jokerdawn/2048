@@ -203,4 +203,5 @@ HTMLActuator.prototype.clearMessage = function () {
   tweet.setAttribute("data-text", text);
 
   return tweet;
-};*/
+};
+*/
