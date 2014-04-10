@@ -145,11 +145,11 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 
 HTMLActuator.prototype.message = function (won) {
   var mytxt=new Array(14);
-  mytxt[0]="津巴多呢？？？";
+  mytxt[0]="津巴多呢？不要气馁，再来一次吧！";
  
   var text3 = function (m) { var r = 0; while (m > 1) r++, m >>= 1; return r; }
   var type    = won ? "game-won" : "game-over";
-  var message = won ? "你终于看到津巴多啦！" : mytxt[0];
+  var message = won ? "你终于看到津巴多啦！祝贺你！" : mytxt[0];
 
   if (typeof ga !== "undefined") {
     ga("send", "event", "game", "end", type, this.score);
